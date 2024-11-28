@@ -72,7 +72,7 @@ const login = async (req) => {
     return {
       status: 200,
       message: "User logged in successfully",
-      token,
+      // token,
     };
   } catch (error) {
     return { status: 500, message: error.message };

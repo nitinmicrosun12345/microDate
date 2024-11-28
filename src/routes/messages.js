@@ -1,8 +1,8 @@
 const express = require('express');
-const mesaggeRouter = express.Router();
+const messagesRouter = express.Router();
 
-mesaggeRouter.get('/', (req, res) => {
+messagesRouter.get('/', (req, res) => {
     res.send('Messages route is working');
 });
 
-module.exports = messageRouter;
+module.exports = messagesRouter;

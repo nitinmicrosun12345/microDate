@@ -1,9 +1,9 @@
 const express = require("express");
 const indexRouter = express.Router();
 // Import other routers
-const userRouter = require("./user.js");
-const matchRouter = require("./match.js");
-const messagesRouter = require("./messages.js");
+const userRouter = require('./user')
+const matchRouter = require('./match');
+const messagesRouter = require("./messages");
 
 // Use other routers
 indexRouter.use("/user", userRouter);
@@ -14,10 +14,10 @@ indexRouter.use("/message", messagesRouter);
 const indexController = require("../controllers/index.js");
 
 // Register a new user
-userRouter.post("/signup", indexController.signupController);
+indexRouter.post("/signup", indexController.signupController);
 
 // Login an existing user
-userRouter.post("/login", indexController.loginController);
+indexRouter.post("/login", indexController.loginController);
 
 
 module.exports = indexRouter;

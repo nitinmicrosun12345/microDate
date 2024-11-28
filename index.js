@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const { connectDB } = require('./db/dbConnection');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const indexRouter = require('./src/routes/index.js');
 const Message = require('./src/models/mesagge.js');
 const { Server } = require('socket.io');
@@ -18,6 +20,10 @@ connectDB();
 
 // Middleware
 app.use(express.json());
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use(cors());
 
 // Routes

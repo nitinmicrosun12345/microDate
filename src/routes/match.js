@@ -1,7 +1,7 @@
 const express = require('express');
-const macthRouter = express.Router();
+const matchRouter = express.Router();
 
-macthRouter.get('/', (req, res) => {
+matchRouter.get('/', (req, res) => {
     res.send('Match route is working');
 });
 

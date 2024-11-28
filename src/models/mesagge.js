@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const MessageSchema = new mongoose.Schema({
   matchId: {
     type: mongoose.Schema.Types.ObjectId,
